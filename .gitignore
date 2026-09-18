@@ -1,0 +1,13 @@
+.vscode
+dist
+chotuai.egg-info
+test-env
+
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+test-env/
+.env
+.vscode/
