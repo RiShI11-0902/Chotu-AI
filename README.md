@@ -9,9 +9,15 @@ A local AI developer assistant powered by Ollama.
 - Review code snippets
 - Choose any Ollama model installed locally
 
+## Prerequisites
+
+- Python 3.10+
+- [Ollama](https://ollama.com) installed and running locally, with at least one model pulled
+- Git (required since installation is via GitHub)
+
 ## Installation
 
-pip install chotuai
+pip install git+https://github.com/RiShI11-0902/Chotu-AI.git
 
 ## Setup
 
