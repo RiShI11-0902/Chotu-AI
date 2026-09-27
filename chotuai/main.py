@@ -9,18 +9,19 @@ from chotuai.commands.setup import setup_ollama
 console = Console()
 
 def commit_message():
-    diff = get_diff()
+        diff = get_diff()
 
-    if not diff:
-        print("No staged changes found.")
-        return
+        if not diff:
+            print("No staged changes found.")
+            return
 
-    print("Generating commit message...")
+        print("Generating commit message...")
 
-    message = generate_commit_message(diff)
+        message = generate_commit_message(diff)
 
-    print("\nSuggested commit message:")
-    print(message)
+        print("\nSuggested commit message:")
+        print(message)
+ 
 
 def review_code(filepath,isFile):
     if isFile:
@@ -57,7 +58,12 @@ def review_code(filepath,isFile):
 
 def main():
     if len(sys.argv) < 2:
-        print('Please Provide a command')
+        print(f'''
+        Please Provide a command
+        1. commit-message - to get the commit message of staged files
+        2. review-file - to review the file by entering the file location name. ex:- app/layout.tsx
+        3. review-snippet - to review the code snippet paste the code in terminal then write end.
+        ''')
         sys.exit(1)
 
     command = sys.argv[1]
